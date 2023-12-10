@@ -14,17 +14,15 @@ public class UsuarioService {
     private PasswordEncoder passwordEncoder;
 
     @Autowired
-    public UsuarioService(UsuarioRepository usuarioRepository) {
+    public UsuarioService(UsuarioRepository usuarioRepository, PasswordEncoder passwordEncoder) {
         this.usuarioRepository = usuarioRepository;
-    }
-
-    @Autowired
-    public void setPasswordEncoder(PasswordEncoder passwordEncoder) {
         this.passwordEncoder = passwordEncoder;
     }
 
     public void cadastrarUsuario(Usuario usuario) {
         // Aqui você pode adicionar lógica de validação, processamento, etc., antes de salvar no banco de dados
+        // Lembre-se de codificar a senha antes de salvar no banco
+        usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
         usuarioRepository.save(usuario);
     }
 
