@@ -1,6 +1,8 @@
 package com.estudos.Estudosspring.controller;
 
+import com.estudos.Estudosspring.entity.Usuario;
 import com.estudos.Estudosspring.service.UsuarioService;
+import com.estudos.Estudosspring.dto.LoginRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

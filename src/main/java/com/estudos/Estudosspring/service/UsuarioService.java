@@ -1,5 +1,6 @@
 package com.estudos.Estudosspring.service;
 
+import com.estudos.Estudosspring.dto.LoginRequest;
 import com.estudos.Estudosspring.entity.Usuario;
 import com.estudos.Estudosspring.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
