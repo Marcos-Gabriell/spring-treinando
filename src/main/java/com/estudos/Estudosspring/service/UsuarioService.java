@@ -4,25 +4,20 @@ import com.estudos.Estudosspring.dto.LoginRequest;
 import com.estudos.Estudosspring.entity.Usuario;
 import com.estudos.Estudosspring.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UsuarioService {
 
     private final UsuarioRepository usuarioRepository;
-    private PasswordEncoder passwordEncoder;
 
     @Autowired
-    public UsuarioService(UsuarioRepository usuarioRepository, PasswordEncoder passwordEncoder) {
+    public UsuarioService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
-        this.passwordEncoder = passwordEncoder;
     }
 
     public void cadastrarUsuario(Usuario usuario) {
-        // Aqui você pode adicionar lógica de validação, processamento, etc., antes de salvar no banco de dados
-        // Lembre-se de codificar a senha antes de salvar no banco
-        usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
+        // Adicione lógica de validação, processamento, etc., antes de salvar no banco de dados
         usuarioRepository.save(usuario);
     }
 
@@ -32,8 +27,8 @@ public class UsuarioService {
 
         // Verifica se o usuário existe
         if (usuario != null) {
-            // Verifica se a senha fornecida corresponde à senha armazenada (considerando que você usa bcrypt)
-            if (passwordEncoder.matches(loginRequest.getSenha(), usuario.getSenha())) {
+            // Verifica se a senha fornecida corresponde à senha armazenada
+            if (loginRequest.getSenha().equals(usuario.getSenha())) {
                 return "Login bem-sucedido!";
             } else {
                 return "Senha incorreta.";
