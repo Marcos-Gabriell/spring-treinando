@@ -1,5 +1,6 @@
 package com.estudos.Estudosspring.controller;
 
+import org.springframework.http.HttpStatus; // Adicione esta importação
 import com.estudos.Estudosspring.entity.Usuario;
 import com.estudos.Estudosspring.service.UsuarioService;
 import com.estudos.Estudosspring.dto.LoginRequest;
@@ -23,13 +24,21 @@ public class UsuarioController {
 
     @PostMapping("/cadastro")
     public ResponseEntity<String> cadastrarUsuario(@RequestBody Usuario usuario) {
-        usuarioService.cadastrarUsuario(usuario);
-        return ResponseEntity.ok("Usuário cadastrado com sucesso");
+        try {
+            usuarioService.cadastrarUsuario(usuario);
+            return ResponseEntity.ok("Usuário cadastrado com sucesso");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao cadastrar usuário");
+        }
     }
 
     @PostMapping("/login")
     public ResponseEntity<String> fazerLogin(@RequestBody LoginRequest loginRequest) {
-        String resultadoLogin = usuarioService.fazerLogin(loginRequest);
-        return ResponseEntity.ok(resultadoLogin);
+        try {
+            String resultadoLogin = usuarioService.fazerLogin(loginRequest);
+            return ResponseEntity.ok(resultadoLogin);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao realizar login");
+        }
     }
 }
