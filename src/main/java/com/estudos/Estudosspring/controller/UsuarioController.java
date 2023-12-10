@@ -1,6 +1,5 @@
 package com.estudos.Estudosspring.controller;
 
-import com.estudos.Estudosspring.entity.Usuario;
 import com.estudos.Estudosspring.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -25,5 +24,10 @@ public class UsuarioController {
         usuarioService.cadastrarUsuario(usuario);
         return ResponseEntity.ok("Usuário cadastrado com sucesso");
     }
-}
 
+    @PostMapping("/login")
+    public ResponseEntity<String> fazerLogin(@RequestBody LoginRequest loginRequest) {
+        String resultadoLogin = usuarioService.fazerLogin(loginRequest);
+        return ResponseEntity.ok(resultadoLogin);
+    }
+}
