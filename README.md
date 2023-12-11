@@ -21,10 +21,10 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 - **Resposta Erro:** Status HTTP 500 Internal Server Error com a mensagem "Erro ao cadastrar usuário".
 
 ### 2. Login de Usuário
-- **Endpoint:** `DELETE /usuario/{id}`
-- **Descrição:** Exclui o usuário com o ID especificado.
-- **Resposta Sucesso:** Status HTTP 200 OK com a mensagem "Deletado com sucesso!".
-- **Resposta Erro:** Status HTTP 404 Not Found se o usuário não for encontrado.
+- **Endpoint:** `POST /api/usuarios/login`
+- **Descrição:** Realiza o login do usuário com as credenciais fornecidas.
+- **Resposta Sucesso:** Status HTTP 200 OK com a mensagem "Login bem-sucedido".
+- **Resposta Erro:** Status HTTP 500 Internal Server Error com a mensagem "Erro ao realizar login".
 
 
 ## Configuração do Banco de Dados
