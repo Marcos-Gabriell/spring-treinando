@@ -23,7 +23,6 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 ### 2. Login de Usuário
 - **Endpoint:** `DELETE /usuario/{id}`
 - **Descrição:** Exclui o usuário com o ID especificado.
-- **Exemplo de Uso:** `/usuario/1`
 - **Resposta Sucesso:** Status HTTP 200 OK com a mensagem "Deletado com sucesso!".
 - **Resposta Erro:** Status HTTP 404 Not Found se o usuário não for encontrado.
 
