@@ -12,6 +12,22 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 - **Lombok** (utilizado para reduzir a verbosidade do código)
 - **Postman** (para testar os endpoints)
 
+## Endpoints
+
+### 1. Cadastrar Usuário
+- **Endpoint:** `POST /api/usuarios/cadastro`
+- **Descrição:** Cria um novo usuário com as informações fornecidas.
+- **Resposta Sucesso:** Status HTTP 200 OK com a mensagem "Usuário cadastrado com sucesso".
+- **Resposta Erro:** Status HTTP 500 Internal Server Error com a mensagem "Erro ao cadastrar usuário".
+
+### 2. Excluir Usuário por ID
+- **Endpoint:** `DELETE /usuario/{id}`
+- **Descrição:** Exclui o usuário com o ID especificado.
+- **Exemplo de Uso:** `/usuario/1`
+- **Resposta Sucesso:** Status HTTP 200 OK com a mensagem "Deletado com sucesso!".
+- **Resposta Erro:** Status HTTP 404 Not Found se o usuário não for encontrado.
+
+
 ## Configuração do Banco de Dados
 
 1. Crie um banco de dados no MySQL para o projeto.
