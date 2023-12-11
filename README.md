@@ -36,4 +36,3 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 spring.datasource.url=jdbc:mysql://localhost:3306/nome_do_banco
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
-****
