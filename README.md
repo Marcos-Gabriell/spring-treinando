@@ -3,7 +3,6 @@
 
 Este é um projeto simples em Java usando Spring Boot, MySQL, Lombok e Postman. O projeto contém endpoints para cadastrar um usuário e realizar login.
 
-
 ## Configuração do Ambiente
 
 Certifique-se de ter as seguintes ferramentas instaladas:
