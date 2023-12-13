@@ -5,6 +5,7 @@ Este é um projeto simples em Java usando Spring Boot, MySQL, Lombok e Postman. 
 
 ## Configuração do Ambiente
 
+
 Certifique-se de ter as seguintes ferramentas instaladas:
 
 - **Java JDK 8 ou superior**
