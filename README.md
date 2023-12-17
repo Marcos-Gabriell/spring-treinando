@@ -25,6 +25,7 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 - **Resposta Sucesso:** Status HTTP 200 OK com a mensagem "Usuário cadastrado com sucesso".
 - **Resposta Erro:** Status HTTP 500 Internal Server Error com a mensagem "Erro ao cadastrar usuário".
 
+
 ### 2. Login de Usuário
 - **Endpoint:** `POST /api/usuarios/login`
 - **Descrição:** Realiza o login do usuário com as credenciais fornecidas.
