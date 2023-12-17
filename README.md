@@ -18,6 +18,7 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 
 ## Endpoints
 
+
 ### 1. Cadastrar Usuário
 - **Endpoint:** `POST /api/usuarios/cadastro`
 - **Descrição:** Cria um novo usuário com as informações fornecidas.
