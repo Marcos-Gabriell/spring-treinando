@@ -26,7 +26,6 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 - **Resposta Sucesso:** Status HTTP 200 OK com a mensagem "Login bem-sucedido".
 - **Resposta Erro:** Status HTTP 500 Internal Server Error com a mensagem "Erro ao realizar login".
 
-
 ## Configuração do Banco de Dados
 
 1. Crie um banco de dados no MySQL para o projeto.
